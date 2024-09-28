@@ -1,0 +1,51 @@
+---
+// Define testimonials/descriptions data
+const experiences = [
+  {
+    name: "Asesor de viajes Oficina de turismo Antibes - Juan les pins",
+    year: "Verano de 2024",
+    longDescription: 
+        "Trabajé como asesora de viajes en la Oficina de Turismo de Antibes Juan-les-Pins, donde mi labor consistía en acoger e informar a los turistas para ofrecerles la mejor experiencia posible. También gestionaba las llamadas telefónicas, proporcionando la información necesaria, así como recibiendo y enviando correos electrónicos."
+  },
+  {
+    name: "Auxiliar de conversación en francés IES A Cachada - Boiro",
+    year: "2022 - 2023",
+    longDescription:
+        "Tras licenciarme en Información y Comunicación, pasé un año trabajando como auxiliar de conversación de francés en un instituto de secundaria. Allí enseñaba mi lengua materna, preparaba clases adaptadas a los distintos niveles de los alumnos y dirigía actividades educativas interactivas. Esta experiencia reforzó mi capacidad de adaptación y organización."
+    },
+  {
+    name: "Prácticas de relaciones con la prensa Oficina de turismo - Niza",
+    year: "Verano de 2021",
+    longDescription:
+        "Durante mis prácticas de relaciones con la prensa en la oficina de turismo, pude adquirir una amplia gama de competencias. Se me encomendaron varias tareas, como gestionar un paquete informático de seguimiento (Meltwater), ayudar a redactar comunicados de prensa para periodistas, gestionar las redes sociales y prestar asistencia técnica a petición de los periodistas."
+}
+];
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+    <div class="mt-6 space-y-2">
+      <div class="h-0.5 bg-secondary"></div>
+      <h3 class="text-secondary text-base font-medium">
+        <span>Mi</span>
+        <span class="font-bold">experiencia</span>
+      </h3>
+      <div class="h-1.5 bg-secondary"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 text-secondary gap-6 pt-2 mt-2">
+      {
+        experiences.map((description) => (
+         <div>
+            <p class="italic text-2xl block font-bold">
+              {description.name}
+            </p>
+            <small> {description.year}</small>
+            <p class="text-xs leading-relaxed mt-6">
+              {description.longDescription}
+            </p>
+         </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

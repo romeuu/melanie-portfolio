@@ -5,31 +5,41 @@ const experiences = [
     name: "Máster 2 cultura y comunicación",
     year: "2024 - 2025",
     description:
-      "Erasmus en la Universidad de Alicante.",
+      "Universidad de Alicante.",
+    longDescription: 
+      "Actualmente estoy de intercambio Erasmus en la Universidad de Alicante como parte de mi Master 2 en la Universidad de Toulouse. Además de escribir mi tesis, estoy buscando unas prácticas que me permitan convalidar mi título y entrar en el mundo profesional."
   },
   {
     name: "Máster 1 cultura y comunicación",
     year: "2023 - 2024",
     description:
       "Universidad Jean Jaurès - Toulouse.",
+    longDescription:
+      "Realicé el primer año de un máster en Cultura y Comunicación en la Universidad de Toulouse, donde llevé a cabo varios proyectos gratificantes, entre ellos la producción de contenidos audiovisuales para la asociación Amis de l'œuvre d'Arcabas. También diseñé carteles publicitarios, lo que me permitió adquirir y perfeccionar mis conocimientos de Adobe."
   },
   {
     name: "Grado información y comunicación.",
     year: "2019 - 2022",
     description:
       "Universidad côte d'azur - Nice.",
+    longDescription:
+      "Después de tres años en la Universidad de Niza, obtuve la licenciatura en Información y Comunicación con mención honorífica. Durante mis estudios, realicé cortometrajes y adquirí experiencia en el ámbito audiovisual, además de profundizar en las bases de las ciencias de la información y la comunicación. Como parte de la carrera, hice prácticas en relaciones de prensa en la Oficina de Turismo de Niza."
   },
   {
     name: "Bachillerato con distinción AB",
     year: "2019",
     description:
-      "Instituto Auguste & Louis Lumière - La Ciotat",
+      "Auguste & Louis Lumière - La Ciotat",
+    longDescription:
+      "Aprobé el bachillerato literario con sobresaliente, cursando la especialidad de cine y audiovisuales. Esta especialización me permitió iniciarme en el mundo audiovisual y de los rodajes."
   },
   {
     name: "Intercambio en Colombia",
     year: "2017 - 2018",
     description:
       "Aprender español.",
+    longDescription:
+      "A los 17 años fui de intercambio escolar a Colombia, una experiencia que me permitió aprender español, descubrir una nueva cultura y adaptarme a un entorno completamente distinto. También me ayudó a ser más independiente."
   },
 ];
 ---
@@ -40,7 +50,7 @@ const experiences = [
       <div class="h-0.5 bg-secondary"></div>
       <h3 class="text-secondary text-base font-medium">
         <span>Mi</span>
-        <span class="font-bold">experiencia</span>
+        <span class="font-bold">formación</span>
       </h3>
       <div class="h-1.5 bg-secondary"></div>
     </div>
@@ -54,6 +64,9 @@ const experiences = [
             <small> {description.year}</small>
             <p class="text-sm leading-relaxed mt-6">
               {description.description}
+            </p>
+            <p class="text-xs leading-relaxed mt-6">
+              {description.longDescription}
             </p>
          </div>
         ))

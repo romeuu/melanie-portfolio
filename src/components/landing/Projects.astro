@@ -2,22 +2,22 @@
 // Define the array of projects directly in the frontmatter script.
 const otherprojects = [
   {
-    "url": "https://www.lexingtonthemes.com/",
+    "url": "branding",
     "title": "Branding",
     "description": "Diseño de identidades visuales y demás requerimientos."
   },
   {
-    "url": "https://www.oxbowui.com/",
+    "url": "diseño",
     "title": "Comunicación y diseño",
     "description": "Creación de carteles para eventos y distintos eventos."
   },
   {
-    "url": "https://www.colorsandfonts.com/",
+    "url": "redes-sociales",
     "title": "Redes Sociales",
     "description": "Creación de contenido para redes sociales."
   },
   {
-    "url": "https://www.svgdoodles.com/",
+    "url": "fotografia",
     "title": "Fotografía",
     "description": "Un pequeño lugar para enseñar mi fotografía como hobby."
   }
@@ -60,7 +60,7 @@ function calculateAosDuration(index) {
             data-aos="fade-up"
             data-aos-duration={calculateAosDuration(index)}
           >
-            <a href={project.url}>
+            <a href={"project/" + project.url}>
               <div class="h-full flex flex-col justify-between">
                 <div>
                   <p class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0  lg:pb-8">

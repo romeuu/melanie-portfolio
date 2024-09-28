@@ -1,0 +1,44 @@
+---
+import { otherprojects } from '../../data/otherprojects.json';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/landing/Hero.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {slug: 'branding'}},
+    {params: {slug: 'diseño'}},
+    {params: {slug: 'redes-sociales'}},
+    {params: {slug: 'fotografia'}},
+  ];
+}
+
+const { slug } = Astro.params;
+
+const project = otherprojects.find(p => p.slug === slug);
+console.log(project);
+
+if (!project) {
+    throw new Error('Proyecto no encontrado.');
+}
+
+---
+
+<BaseLayout>
+    <Hero/>
+    <section class="bg-primary">
+        <div class="px-8 2xl:max-w-7xl mx-auto py-6">
+            <h3 class="italic text-3xl block font-bold text-secondary">{project.title}</h3>
+            <p class="text-secondary mt-6">{project.text}</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 text-secondary gap-6 lg:gap-y-12 lg:mt-12">
+                {project.images.map((url) => (
+                <img
+                    class="leading-relaxed lg:w-3/4 mx-auto"
+                    data-aos="fade-up"
+                    data-aos-duration="2500"
+                    src={'/images/' + url}
+                ></img>
+                ))}
+            </div>
+        </div>
+    </section>
+</BaseLayout>
