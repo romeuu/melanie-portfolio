@@ -1,29 +1,35 @@
 ---
-// Define testimonials/opinions data
-const humanOpinions = [
+// Define testimonials/descriptions data
+const experiences = [
   {
-    name: "Amrit Nagi",
-    role: "Founder of Tailwind Toolbox",
-    opinion:
-      "I've been following Mike's career for a while now and it's amazing just how quickly the quality and variety of his work has developed and evolved! He's always learning or working on something new and constantly refining his work to be the best! His attention to detail, 'can do' attitude and work ethic is refreshing and he will definitely help you succeed!",
+    name: "Máster 2 cultura y comunicación",
+    year: "2024 - 2025",
+    description:
+      "Erasmus en la Universidad de Alicante.",
   },
   {
-    name: "Gabriel Perales",
-    role: "Software Engineer at Cabify",
-    opinion:
-      "Mike has helped me with many designs, and I couldn't follow his working speed when we worked together. His designs are slick, and he delivers a lot of value; he is constantly iterating his designs and making improvements.",
+    name: "Máster 1 cultura y comunicación",
+    year: "2023 - 2024",
+    description:
+      "Universidad Jean Jaurès - Toulouse.",
   },
   {
-    name: "Volkan Kaya",
-    role: "Founder of Versoly.com",
-    opinion:
-      "Mike is a rare breed of designer & developer that understands business needs. He leveraged his previous experience to build out a few landing pages very quickly for Versoly.",
+    name: "Grado información y comunicación.",
+    year: "2019 - 2022",
+    description:
+      "Universidad côte d'azur - Nice.",
   },
   {
-    name: "Mike",
-    role: "Blogger at Raspada",
-    opinion:
-      "I have had the absolute pleasure of working with Mike in the past when building my blog Raspada with its Backend UI or to building a private application for a leading hearing care company. Mike’s knowledge and attention to detail is second to none, and he really understands and listens to his clients (me).",
+    name: "Bachillerato con distinción AB",
+    year: "2019",
+    description:
+      "Instituto Auguste & Louis Lumière - La Ciotat",
+  },
+  {
+    name: "Intercambio en Colombia",
+    year: "2017 - 2018",
+    description:
+      "Aprender español.",
   },
 ];
 ---
@@ -33,20 +39,21 @@ const humanOpinions = [
     <div class="mt-6 space-y-2">
       <div class="h-0.5 bg-secondary"></div>
       <h3 class="text-secondary text-base font-medium">
-        <span>human</span>
-        <span class="font-bold">opinions</span>
+        <span>Mi</span>
+        <span class="font-bold">experiencia</span>
       </h3>
       <div class="h-1.5 bg-secondary"></div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 pt-2 mt-2">
+    <div class="grid grid-cols-1 lg:grid-cols-5 text-secondary gap-6 pt-2 mt-2">
       {
-        humanOpinions.map((opinion) => (
+        experiences.map((description) => (
          <div>
             <p class="italic text-2xl block font-bold">
-              {opinion.name} {opinion.role}
+              {description.name}
             </p>
+            <small> {description.year}</small>
             <p class="text-sm leading-relaxed mt-6">
-              {opinion.opinion}
+              {description.description}
             </p>
          </div>
         ))
