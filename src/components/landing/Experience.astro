@@ -2,22 +2,39 @@
 // Define testimonials/descriptions data
 const experiences = [
   {
-    name: "Asesor de viajes Oficina de turismo Antibes - Juan les pins",
+    name: "Digital Marketing Specialist – Awayke Talent Solutions",
+    year: "Noviembre 2024 - Actualidad",
+    location: "Campello, Alicante",
+    longDescription: 
+        "Participo en la estrategia digital de la empresa, creando contenido para redes sociales, gestionando campañas y analizando resultados. Tras las prácticas, continué como freelance, ampliando mi experiencia en marketing digital en un entorno dinámico."
+  },
+  {
+    name: "Asesor de viajes Oficina de turismo Antibes - Juan-les-Pins",
+    location: "Antibes, Francia",
     year: "Verano de 2024",
     longDescription: 
-        "Trabajé como asesora de viajes en la Oficina de Turismo de Antibes Juan-les-Pins, donde mi labor consistía en acoger e informar a los turistas para ofrecerles la mejor experiencia posible. También gestionaba las llamadas telefónicas, proporcionando la información necesaria, así como recibiendo y enviando correos electrónicos."
+        "Fui el primer contacto para turistas nacionales e internacionales, ofreciendo atención personalizada por distintos canales y facilitando información útil sobre la ciudad. Esta experiencia reforzó mi capacidad de comunicación y orientación al cliente."
+  },
+  {
+    name: "Producción audiovisual cultural – Amis d’Arcabas",
+    location: "Toulouse, Francia",
+    year: "Noviembre – Marzo 2024",
+    longDescription: 
+        "Desarrollé un vídeo de mediación cultural desde la idea inicial hasta la postproducción, gestionando guión, casting, presupuesto y edición. Aprendí a liderar proyectos creativos dentro del ámbito cultural, con enfoque narrativo y colaborativo."
   },
   {
     name: "Auxiliar de conversación en francés IES A Cachada - Boiro",
+    location: "Boiro, A Coruña",
     year: "2022 - 2023",
     longDescription:
-        "Tras licenciarme en Información y Comunicación, pasé un año trabajando como auxiliar de conversación de francés en un instituto de secundaria. Allí enseñaba mi lengua materna, preparaba clases adaptadas a los distintos niveles de los alumnos y dirigía actividades educativas interactivas. Esta experiencia reforzó mi capacidad de adaptación y organización."
+        "Tras licenciarme en Información y Comunicación, trabajé un año como auxiliar de conversación de francés en un instituto, donde preparaba clases y actividades adaptadas a distintos niveles. Esta experiencia fortaleció mi capacidad de adaptación y organización."
     },
   {
-    name: "Prácticas de relaciones con la prensa Oficina de turismo - Niza",
+    name: "Prácticas en Relaciones con la Prensa – Oficina de Turismo de Niza",
+    location: "Niza, Francia",
     year: "Verano de 2021",
     longDescription:
-        "Durante mis prácticas de relaciones con la prensa en la oficina de turismo, pude adquirir una amplia gama de competencias. Se me encomendaron varias tareas, como gestionar un paquete informático de seguimiento (Meltwater), ayudar a redactar comunicados de prensa para periodistas, gestionar las redes sociales y prestar asistencia técnica a petición de los periodistas."
+        "Colaboré en la comunicación institucional y turística, usando la herramienta Meltwater para el seguimiento mediático, redactando comunicados de prensa y ofreciendo soporte informativo a periodistas. Esta experiencia fortaleció mis habilidades comunicativas en un entorno profesional y orientado al detalle."
 }
 ];
 ---
@@ -32,7 +49,7 @@ const experiences = [
       </h3>
       <div class="h-1.5 bg-secondary"></div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 text-secondary gap-6 pt-2 mt-2">
+    <div class="grid grid-cols-1 lg:grid-cols-5 text-secondary gap-6 pt-2 mt-2">
       {
         experiences.map((description) => (
          <div>
@@ -40,6 +57,8 @@ const experiences = [
               {description.name}
             </p>
             <small> {description.year}</small>
+            <br>
+            <small>{description.location}</small>
             <p class="text-xs leading-relaxed mt-6">
               {description.longDescription}
             </p>
